@@ -24,7 +24,7 @@ body {
 header {
   width: 100%;
   height: 300px;
-  background-color: #e1dbc4;
+  background-image: url("bannerluv.png");
   text-align: center;
   position: relative;
   position: fixed;
