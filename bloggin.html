@@ -17,70 +17,46 @@
 </header>
 
 <style>
-  * {
-  box-sizing: border-box;
+
+
+/* Add padding BETWEEN each column */
+.row,
+.row .column {
+  padding: 8px;
 }
 
-/* Create two equal columns that floats next to each other */
+/* Create four equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
   padding: 10px;
-  height: 300px;
-  /* Should be removed. Only for demonstration */
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
 }
 
-
-* {
-  box-sizing: border-box;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
-
-img{
-    float: left;
- margin: 20px;
-  border-style: double 
-
-
-}
-
-.row:after {
-  content: "";
-  clear: both;
-  display: table;
-
-}
-
-[class*="col-"] {
-
-  padding: 15px;
-  width: 100%;
-
-}
-
-
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.aside {
-  background-color: transparent;
-  padding: 15px;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  text-justify: inter-word;
-
-}
-
 
 
 </style>
@@ -101,28 +77,43 @@ img{
 
       <br><br>
     Choose any topic that interests you.</p>
+    
+
 <!---------------------------------content----------------------------------------->
+    <!-- MAIN (Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
     <div class="content">
-    <div class="box">
-      <div class="row">
-    <div class="aside">
-          <img src="profpic.jpg" style="width:400px;height:300px;">
-         <p>Introductions to Owlena.</p>
-         <br>
-
-
-          <img src="profpic.jpg" style="width:400px;height:300px;">
-          <p>My Cupid Flower Boy short story </p>
-
-
-       </div>
-     </div>
-   </div>
- </div>
-
-  </section>
+      <img src="profpic.jpg" alt="Cupid" style="width:100%">
+      <h3>My Cupid Flower Boy</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="profpic.jpg" alt="Owl" style="width:100%">
+      <h3>Owlena</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="profpic.jpg" alt="TBA" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
   
+<!-- END GRID -->
+</div>
 
+
+<!-- END MAIN -->
+</div>
+  </section>
 </main>
 </body>
 </html>
