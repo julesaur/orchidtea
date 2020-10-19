@@ -4,6 +4,7 @@
   <title>
       ABOUT - SIPPING TEA WITH REMINISCE
   </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="teabag.css">
 </head>
   <header>
@@ -46,8 +47,22 @@ In my spare time, I would drink sweet/bitter tea, ride my bike in the park, and 
   
   </section>
   
-
 </main>
+
+<script>
+ $(function() {
+  $(window).scroll(function() {
+    var winTop = $(window).scrollTop();
+    if (winTop >= 30) {
+      $("body").addClass("sticky-header");
+    } else {
+      $("body").removeClass("sticky-header");
+    }
+  })
+})
+
+</script>
+
 </body>
 </html>
 
