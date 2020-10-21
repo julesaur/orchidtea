@@ -26,6 +26,51 @@ div{
   margin-right: auto;
   width: 70%;
 }
+/*-------------------contact form--------------------*/
+form {
+    width: 80%;
+  }
+  .contact-text {
+  width: 60%;
+  margin: 120px auto 48px auto;
+  text-align: center;
+}
+form {
+  width: 400px;
+  margin: 0px auto 64px auto;
+}
+input,
+label {
+  display: block;
+}
+input {
+  width: 100%;
+  height: 44px;
+  margin: 4px 0px 16px 0px;
+  border-radius: none;
+  border: 1px solid gray;
+  transition: 0.3s ease-in-out;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  margin: 4px 0px 16px 0px;
+  border-radius: none;
+  border: 1px solid gray;
+  transition: 0.3s ease-in-out;
+}
+input[type="submit"] {
+  border-radius: none;
+  border: 2px solid black;
+  background-color: #EDE6F2 ;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: black;
+}
 
 </style>
 
@@ -36,8 +81,23 @@ div{
   <section id="section_01">
     <div>
     <h2>Contact</h2> 
+    <h3> Any inquiries? Please fill out below ⬇️ </h3>
 
-     
+     <!-- modify this form HTML and place wherever you want your form -->
+
+<form
+  action="https://formspree.io/f/xleoblbg"
+  method="POST">
+  <label>
+    <label for="name">First name:</label>
+        <input type="text" name="name">
+        <label for="email">E-mail</label>
+        <input type="email" name="_replyto">
+        <label for="lname">Message</label>
+        <textarea name="message"></textarea>
+        <br>
+        <input type="submit" value="Send">
+</form>
 
 
 
